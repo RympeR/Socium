@@ -10,7 +10,7 @@ namespace Test_game
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("check");
         }
     }
 }
