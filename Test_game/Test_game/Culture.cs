@@ -8,6 +8,7 @@ namespace Test_game
 {
     class Culture
     {
+        
         int culture;
     }
 }
