@@ -1,0 +1,7 @@
+C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\obj\Debug\Test_game.csprojAssemblyReference.cache
+C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\obj\Debug\Test_game.csproj.CoreCompileInputs.cache
+C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\bin\Debug\Test_game.exe.config
+C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\bin\Debug\Test_game.exe
+C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\bin\Debug\Test_game.pdb
+C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\obj\Debug\Test_game.exe
+C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\obj\Debug\Test_game.pdb
