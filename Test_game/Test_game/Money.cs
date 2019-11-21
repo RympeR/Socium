@@ -8,6 +8,6 @@ namespace Test_game
 {
     class Money
     {
-        public int 
+     
     }
 }

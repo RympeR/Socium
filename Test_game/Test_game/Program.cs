@@ -10,7 +10,11 @@ namespace Test_game
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hi shoza");
+            for (int i = 0; i < 15000; i++)
+            {
+                Console.Write(i + " ");
+            }
+            Console.ReadKey();
         }
     }
 }
