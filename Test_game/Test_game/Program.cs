@@ -18,6 +18,7 @@ namespace Test_game
             Console.WriteLine("check");
             Console.WriteLine("hi");
             Console.WriteLine("1");
+            Console.WriteLine("2");
 
         }
     }
