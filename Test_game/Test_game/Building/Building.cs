@@ -8,10 +8,14 @@ namespace Test_game.Building
 {
     abstract class Building : VisualObject, IBuild
     {
-
+        
         public override void Show()
         {
+            
+        }
 
+        void hui() {
+             
         }
     }
 }

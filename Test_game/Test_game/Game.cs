@@ -45,9 +45,34 @@ namespace Test_game
                         Console.WriteLine("Min scale already");
                     m.Show(scale);
                 }
+                if (key.Key == ConsoleKey.Q) Environment.Exit(0);
+                if (key.Key == ConsoleKey.B)
+                {
+                    Console.Clear();
+                    m.Show(scale);
+                    Console.WriteLine("1.Houses");
+                    Console.WriteLine("2.Houses");
+                    Console.WriteLine("3.Houses");
+                    Console.WriteLine("4.Houses");
+                    Console.WriteLine("5.Houses");
+                    int choice = Console.Read();
+                }
+
             }
         }
 
+        public void Choice(int a)
+        {
+            switch (a)
+            {
+                case 1:
+                    //BuildHouse();
+                    break;
+                default:
+                    break;
+            }
+        }
+        
         public void Start()
         {
             Console.WriteLine("Game is started");
