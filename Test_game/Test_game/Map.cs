@@ -6,7 +6,19 @@ using System.Threading.Tasks;
 
 namespace Test_game
 {
-    class Map : Display
+    class Map : VisualObject
     {
+        public Map()
+        {
+
+        }
+
+        public Map(String start)
+        {
+        }
+
+        public override void Show()
+        {
+        }
     }
 }

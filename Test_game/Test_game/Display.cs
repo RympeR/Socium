@@ -45,9 +45,12 @@ namespace Test_game
             }
         }*/
 
-        public static void Show(VisualObject vo)
+        public static void Show(List<VisualObject> vo)
         {
-            vo.Display();
+            foreach (VisualObject visualObject in vo)
+            {
+                visualObject.Show();
+            }
         }
 
     }

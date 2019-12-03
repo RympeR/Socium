@@ -43,32 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BuildingTypes\Building.cs" />
-    <Compile Include="BuildingTypes\CommuneStructures\Canalization.cs" />
-    <Compile Include="BuildingTypes\CommuneStructures\ElectroNetwork.cs" />
-    <Compile Include="BuildingTypes\CommuneStructures\Internet.cs" />
-    <Compile Include="BuildingTypes\CommuneStructures\TrashClean.cs" />
-    <Compile Include="BuildingTypes\CommuneStructures\WaterSystem.cs" />
-    <Compile Include="BuildingTypes\GosStructures\FireStation.cs" />
-    <Compile Include="BuildingTypes\GosStructures\Hospital.cs" />
-    <Compile Include="BuildingTypes\GosStructures\PoliceStation.cs" />
-    <Compile Include="BuildingTypes\Houses\commune.cs" />
-    <Compile Include="BuildingTypes\Houses\Duple.cs" />
-    <Compile Include="BuildingTypes\Houses\Highest.cs" />
-    <Compile Include="BuildingTypes\Houses\some_houses.cs" />
-    <Compile Include="BuildingTypes\Houses\Stage1.cs" />
-    <Compile Include="BuildingTypes\Houses\Stage12.cs" />
-    <Compile Include="BuildingTypes\Houses\Stage3-5.cs" />
-    <Compile Include="BuildingTypes\Houses\Stage7.cs" />
-    <Compile Include="BuildingTypes\Houses\Stege9.cs" />
-    <Compile Include="BuildingTypes\Houses\TownHouse.cs" />
-    <Compile Include="BuildingTypes\SocialPlaces\Caffe.cs" />
-    <Compile Include="BuildingTypes\SocialPlaces\HairMaster.cs" />
-    <Compile Include="BuildingTypes\SocialPlaces\Playground.cs" />
-    <Compile Include="BuildingTypes\IBuild.cs" />
-    <Compile Include="BuildingTypes\Science\Library.cs" />
-    <Compile Include="BuildingTypes\Science\School.cs" />
-    <Compile Include="BuildingTypes\Science\University.cs" />
+    <Compile Include="Building\Building.cs" />
+    <Compile Include="Building\Duplex.cs" />
+    <Compile Include="Building\Houses.cs" />
+    <Compile Include="Building\IBuild.cs" />
     <Compile Include="Culture.cs" />
     <Compile Include="Display.cs" />
     <Compile Include="Disturbance.cs" />
@@ -83,6 +61,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources.cs" />
     <Compile Include="Smart.cs" />
+    <Compile Include="Terrain.cs" />
+    <Compile Include="VisualObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

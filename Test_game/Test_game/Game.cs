@@ -8,14 +8,13 @@ namespace Test_game
 {
     class Game
     {
-        Display disp = new Display(10, 10);
-
+        Map m = new Map("random");
 
         public void GameLoop()
         {
             while (true)
             {
-                disp.Output();
+                //disp.output();
             }
         }
 
