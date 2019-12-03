@@ -50,6 +50,7 @@
     <Compile Include="Culture.cs" />
     <Compile Include="Display.cs" />
     <Compile Include="Disturbance.cs" />
+    <Compile Include="FastNoise.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Infrastructure.cs" />
     <Compile Include="Map.cs" />

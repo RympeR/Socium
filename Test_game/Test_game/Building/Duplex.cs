@@ -6,30 +6,37 @@ using System.Threading.Tasks;
 
 namespace Test_game.Building
 {
-    class Duplex:Houses
+    class Duplex : Houses
     {
         Map m = new Map();
-        const byte width = 2;
-        const byte height = 1;
         const char symb = 'd';
         const String name = "Дуплекс";
+
+        public Duplex()
+        {
+            width = 2;
+            height = 1;
+        }
+
+
+
+
         public override void Show()
         {
-            
             int x = 0,
                 y = 0;
             char[,] cop = Copy(display, x, y);
             ConsoleKeyInfo key = Console.ReadKey();
-            
+
             while (key.Key != ConsoleKey.Q || key.Key != ConsoleKey.B)
             {
-                for (int i = x; i < height + x; i++)
+                if(x+height > cop.Length)
+                for (int i = x; i < x + height; i++)
                 {
-                    for (int j = y; j < width + y; j++)
+                    for (int j = y; j < y + width; j++)
                     {
                         cop[i, j] = 'd';
                         Console.ForegroundColor = ConsoleColor.Black;
-
                     }
                 }
 
@@ -38,14 +45,12 @@ namespace Test_game.Building
                 {
                     Console.Clear();
                     m.Show();
-                    try { y++; }
-
-                    catch { }
+                    y++;
                     for (int i = x; i < height + x; i++)
                     {
                         for (int j = y; j < width + y; j++)
                         {
-                            cop[i, j] = 'd';
+                            cop[i, j] = '1';
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                     }
@@ -54,14 +59,12 @@ namespace Test_game.Building
                 {
                     Console.Clear();
                     m.Show();
-                    try { x++; }
-
-                    catch { }
+                    x++;
                     for (int i = x; i < height + x; i++)
                     {
                         for (int j = y; j < width + y; j++)
                         {
-                            cop[i, j] = 'd';
+                            cop[i, j] = '1';
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                     }
@@ -70,14 +73,12 @@ namespace Test_game.Building
                 {
                     Console.Clear();
                     m.Show();
-                    try { y--; }
-                    
-                    catch { }
+                    y--;
                     for (int i = x; i < height + x; i++)
                     {
                         for (int j = y; j < width + y; j++)
                         {
-                            cop[i, j] = 'd';
+                            cop[i, j] = '1';
                             Console.ForegroundColor = ConsoleColor.White;
                         }
                     }
@@ -86,13 +87,12 @@ namespace Test_game.Building
                 {
                     Console.Clear();
                     m.Show();
-                    try { x--; }
-                    catch { }
+                    x--;
                     for (int i = x; i < height + x; i++)
                     {
                         for (int j = y; j < width + y; j++)
                         {
-                            cop[i, j] = 'd';
+                            cop[i, j] = '1';
                             foreach (var item in space)
                             {
                                 //?
@@ -104,7 +104,7 @@ namespace Test_game.Building
 
                 if (key.Key == ConsoleKey.B)
                 {
-                    bool av = true; ;
+                    bool isAvailable = true;
                     Console.Clear();
                     m.Show();
                     for (int i = x; i < height + x; i++)
@@ -114,17 +114,17 @@ namespace Test_game.Building
                             foreach (var item in space)
                             {
                                 if (item == false)
-                                    av = false;
+                                    isAvailable = false;
                                 break;
                             }
-                            if (av)
+                            if (isAvailable)
                             {
-                                display[i, j] = 'd';
+                                display[i, j] = '1';
                                 Console.ForegroundColor = ConsoleColor.Black;
                             }
                             else
                             {
-                                cop[i, j] = 'd';
+                                cop[i, j] = '1';
                                 Console.ForegroundColor = ConsoleColor.Red;
                             }
                         }
@@ -138,6 +138,11 @@ namespace Test_game.Building
             }
         }
 
+        public void Draw(VisualObject visualObject)
+        {
+
+        }
+
         public override void Show(int scale)
         {
             for (int i = 0; i < sizeX * scale; i++)
@@ -147,11 +152,11 @@ namespace Test_game.Building
                     char symb = display[i / scale, j / scale];
                     for (int x = 0; x < scale; x++)
                     {
-                        m.ChooseColor(symb);
+                        //m.ChooseColor(symb);
                         Console.Write(" ");
                     }
                 }
-                m.ChooseColor('1');
+                //m.ChooseColor('1');
                 Console.WriteLine();
             }
         }

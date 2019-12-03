@@ -8,13 +8,18 @@ namespace Test_game
 {
     class Game
     {
-        Map m = new Map(startConditions.random);
+        Map m = new Map(startConditions.random, 40, 50);
+        bool isGame = true;
+
+
+
+
 
         public void GameLoop()
         {
             int scale = 1;
             m.Show(scale);
-            while (true)
+            while (isGame)
             {
                 Console.WriteLine("\n\r\n\r");
                 ConsoleKeyInfo key = Console.ReadKey();
@@ -45,7 +50,8 @@ namespace Test_game
                         Console.WriteLine("Min scale already");
                     m.Show(scale);
                 }
-                if (key.Key == ConsoleKey.Q) Environment.Exit(0);
+                if (key.Key == ConsoleKey.Q)
+                    isGame = false;
                 if (key.Key == ConsoleKey.B)
                 {
                     Console.Clear();
@@ -77,6 +83,7 @@ namespace Test_game
         {
             Console.WriteLine("Game is started");
             GameLoop();
+            Console.WriteLine("Game finished!");
         }
 
     }

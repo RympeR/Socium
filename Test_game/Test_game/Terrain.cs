@@ -19,10 +19,10 @@ namespace Test_game
 
     enum Ground
     {
-        rock = 'r',
-        sand = 's',
-        grass = 'g',
         water = 'w',
-        dirt = 'd'
+        sand = 's',
+        dirt = 'd',
+        grass = 'g',
+        rock = 'r'
     }
 }

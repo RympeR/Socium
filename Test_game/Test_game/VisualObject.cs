@@ -8,11 +8,11 @@ namespace Test_game
 {
     abstract class VisualObject
     {
-        protected const int sizeX = 50;
-        protected const int sizeY = 20;
-        protected const int scale = 1;//?
-        protected char[,] display = new char[sizeX, sizeY];
-        protected bool[,] space = new bool[sizeX, sizeY];
+        protected int sizeX = 20;
+        protected int sizeY = 50;
+        protected int scale = 1;//?
+        protected char[,] display;
+        protected bool[,] space;
         
         public abstract void Show();
         public abstract void Show(int scale);
@@ -29,5 +29,7 @@ namespace Test_game
             }
             return b;
         }
+
+        
     }
 }

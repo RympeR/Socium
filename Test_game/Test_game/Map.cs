@@ -15,7 +15,7 @@ namespace Test_game
         }
 
         public Map(startConditions start)
-        {   
+        {
             if (start == startConditions.random)
             {
                 generateRandomMap();
@@ -24,6 +24,8 @@ namespace Test_game
 
         public Map(startConditions start, int mapWidth, int mapHeight)
         {
+            sizeX = mapWidth;
+            sizeY = mapHeight;
             if (start == startConditions.random)
             {
                 generateRandomMap();
@@ -32,15 +34,32 @@ namespace Test_game
 
         void generateRandomMap()
         {
-            Random r = new Random();
-            for (int i = 0; i < sizeX; i++)
+            display = new char[sizeX, sizeY];
+            space = new bool[sizeX, sizeY];
+            int seed = new Random(DateTime.UtcNow.Minute * DateTime.UtcNow.Second).Next();
+            FastNoise myNoise = new FastNoise(seed); // Create a FastNoise object
+            myNoise.SetNoiseType(FastNoise.NoiseType.SimplexFractal); // Set the desired noise type
+            int noiseFreq = 3;
+
+            using (System.IO.StreamWriter writer = new System.IO.StreamWriter("map" + seed + ".smp"))
             {
-                for (int j = 0; j < sizeY; j++)
+
+                Random r = new Random();
+                for (int i = 0; i < sizeX; i++)
                 {
-                    space[i, j] = true;
-                    display[i, j] = Terrain.getGround((byte)r.Next(0, 6));
+                    for (int j = 0; j < sizeY; j++)
+                    {
+                        space[i, j] = true;
+                        double curNoiseValue = myNoise.GetNoise(i * noiseFreq, j * noiseFreq);
+                        byte value = (byte)Math.Round((((curNoiseValue+1))*3) - 1);
+                        display[i, j] = Terrain.getGround(value);
+                        writer.Write(value + "  ");
+                    }
+                    writer.WriteLine();
                 }
-            }
+                writer.Close();
+
+            };
         }
 
         public override void Show()
@@ -60,11 +79,11 @@ namespace Test_game
 
         public override void Show(int scale)
         {
-            for (int i = 0; i < sizeX*scale; i++)
+            for (int i = 0; i < sizeX * scale; i++)
             {
-                for (int j = 0; j < sizeY* scale; j+= scale)
+                for (int j = 0; j < sizeY * scale; j += scale)
                 {
-                    char symb = display[i/scale, j/scale];
+                    char symb = display[i / scale, j / scale];
                     for (int x = 0; x < scale; x++)
                     {
                         ChooseColor(symb);
@@ -80,19 +99,24 @@ namespace Test_game
         {
             switch (c)
             {
-                case 'r': Console.BackgroundColor = ConsoleColor.Gray;
+                case 'r':
+                    Console.BackgroundColor = ConsoleColor.Gray;
                     Console.ForegroundColor = ConsoleColor.Black;
                     break;
-                case 'w': Console.BackgroundColor = ConsoleColor.Blue;
+                case 'w':
+                    Console.BackgroundColor = ConsoleColor.Blue;
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
-                case 'g': Console.BackgroundColor = ConsoleColor.Green;
+                case 'g':
+                    Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
                     break;
-                case 'd': Console.BackgroundColor = ConsoleColor.DarkYellow;
+                case 'd':
+                    Console.BackgroundColor = ConsoleColor.DarkYellow;
                     Console.ForegroundColor = ConsoleColor.White;
                     break;
-                case 's': Console.BackgroundColor = ConsoleColor.Yellow;
+                case 's':
+                    Console.BackgroundColor = ConsoleColor.Yellow;
                     Console.ForegroundColor = ConsoleColor.Black;
                     break;
                 default:

@@ -8,7 +8,10 @@ namespace Test_game.Building
 {
     abstract class Building : VisualObject, IBuild
     {
-        
+
+        protected byte width = 1;
+        protected byte height = 1;
+
         public override void Show()
         {
             
