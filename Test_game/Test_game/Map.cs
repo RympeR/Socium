@@ -9,8 +9,8 @@ namespace Test_game
     class Map : VisualObject
     {
 
-        int x = 20;
-        int y = 50;
+        int width = 20;
+        int height = 50;
 
         public Map()
         {
@@ -28,8 +28,8 @@ namespace Test_game
 
         public Map(startConditions start, int mapWidth, int mapHeight)
         {
-            x = mapWidth;
-            y = mapHeight;
+            width = mapWidth;
+            height = mapHeight;
             if (start == startConditions.random)
             {
 
@@ -38,8 +38,15 @@ namespace Test_game
 
         void generateRandomMap()
         {
-            display = new char[x, y];
-
+            Random r = new Random();
+            display = new char[width, height];
+            for (int i = 0; i < width; i++)
+            {
+                for (int j = 0; j < height; j++)
+                {
+                    display[i, j] = Ground.dirt;
+                }
+            }
         }
 
         public override void Show()
