@@ -5,3 +5,10 @@ C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\bin
 C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\bin\Debug\Test_game.pdb
 C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\obj\Debug\Test_game.exe
 C:\Users\Георгий Рашков\source\repos\Socium\Test_game\Test_game\obj\Debug\Test_game.pdb
+F:\_FLASHWORK\Games\Socium\Socium\Test_game\Test_game\bin\Debug\Test_game.exe.config
+F:\_FLASHWORK\Games\Socium\Socium\Test_game\Test_game\bin\Debug\Test_game.exe
+F:\_FLASHWORK\Games\Socium\Socium\Test_game\Test_game\bin\Debug\Test_game.pdb
+F:\_FLASHWORK\Games\Socium\Socium\Test_game\Test_game\obj\Debug\Test_game.csprojAssemblyReference.cache
+F:\_FLASHWORK\Games\Socium\Socium\Test_game\Test_game\obj\Debug\Test_game.csproj.CoreCompileInputs.cache
+F:\_FLASHWORK\Games\Socium\Socium\Test_game\Test_game\obj\Debug\Test_game.exe
+F:\_FLASHWORK\Games\Socium\Socium\Test_game\Test_game\obj\Debug\Test_game.pdb

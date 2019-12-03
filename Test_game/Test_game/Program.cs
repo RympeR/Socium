@@ -10,18 +10,8 @@ namespace Test_game
     {
         static void Main(string[] args)
         {
-            for (int i = 0; i < 15000; i++)
-            {
-                Console.Write(i + " ");
-            }
-            Console.ReadKey();
-            Console.WriteLine("check");
-            Console.WriteLine("hi");
-            Console.WriteLine("1");
-            Console.WriteLine("2");
-            Console.WriteLine("3");
-            Console.WriteLine("4");
-
+            Game g = new Game();
+            g.Start();
         }
     }
 }

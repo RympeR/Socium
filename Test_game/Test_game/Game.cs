@@ -19,5 +19,10 @@ namespace Test_game
             }
         }
 
+        public void Start()
+        {
+            Console.WriteLine("Game is started");
+        }
+
     }
 }
