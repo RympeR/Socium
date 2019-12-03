@@ -8,9 +8,12 @@ namespace Test_game
 {
     static class Terrain
     {
-        public char getGround(byte num)
+        static readonly char[] ground = {'r', 'g', 's', 'w', 'd' };
+        public static char getGround(byte num)
         {
-            return Ground.dirt.();
+            if (num > 4)
+                num = 4;
+            return ground[num];
         }
     }
 

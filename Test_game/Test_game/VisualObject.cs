@@ -11,5 +11,6 @@ namespace Test_game
         protected char[,] display;
 
         public abstract void Show();
+        public abstract void Show(int scale);
     }
 }

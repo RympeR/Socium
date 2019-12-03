@@ -12,5 +12,11 @@ namespace Test_game.Building
         const byte height = 1;
         const char symb = 'd';
         const String name = "Дуплекс";
+        public override void Show()
+        {
+        }
+        public override void Show(int scale)
+        {
+        }
     }
 }
